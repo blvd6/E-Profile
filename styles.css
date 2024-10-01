@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: #4CAF50;
+    background: #051e57;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -32,7 +32,7 @@ section {
 }
 
 h2 {
-    color: #4CAF50;
+    color: #051e57;
 }
 
 .project {
@@ -58,7 +58,7 @@ form input, form textarea {
 }
 
 button {
-    background: #4CAF50;
+    background: #051e57;
     color: #fff;
     padding: 10px;
     border: none;
@@ -67,7 +67,7 @@ button {
 }
 
 button:hover {
-    background: #45a049;
+    background: #051e57;
 }
 
 footer {
