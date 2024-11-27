@@ -4,66 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theodora Stavrou - E-Profile</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Light/Dark Mode Toggle Button -->
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <header>
+        <h1>Theodora Stavrou</h1>
+        <p>University Student</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm Theodora</h1>
-            <p>Aspiring Computer Engineer and Enthusiast</p>
-            <a href="#about" class="btn">Learn More</a>
-        </div>
+    <section id="about">
+        <h2>About me</h2>
+        <p>Hello, my name is Theodora Stavrou and I am a first-year student at the Cyprus University of Technology studying Computer Engineering and Informatics. </p>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <p>Hello, my name is Theodora Stavrou and I am a first-year student at the Cyprus University of Technology studying Computer Engineering and Informatics.</p>
-    </section>
-
-    <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="project">
-            <img src="eyp-thumbnail.jpg" alt="EYP Alumni" class="project-thumbnail">
             <h3>EYP Alumni</h3>
-            <p>I took part in the 17th National Session of the Cyprus European Youth Parliament as a delegate in the summer of 2023.</p>
+            <p>I took part in the 17th National Session of the Cyprus European Youth Parliament as a delegate in the summer of 2023</p>
         </div>
         <div class="project">
-            <img src="ielts-thumbnail.jpg" alt="IELTS" class="project-thumbnail">
             <h3>IELTS</h3>
-            <p>In March of 2024 I took the Academic IELTS examination with an overall band score of 7.5.</p>
+            <p>In March of 2024 I took the Academic IELTS examination with an overall band score of 7.5 </p>
         </div>
+       <div class="project">
+            <h3>IGCSE</h3>
+            <p>In June of 2022 I took the IGCSE examination with an A* Grade</p>
+        </div>
+        <div class="project">
+            <h3>ECDL</h3>
+            <p>I have an ECDL Standard Certificate by completing the following modules:<br>
+               1. Online Collaboration   (04.02.2017)</p>
+            <br>2. Word Processing        (27.05.2017)</p>
+            <br>3. Presentations          (03.02.2018)</p>
+            <br>4. Spreadsheets           (26.05.2018)</p>
+            <br>5. Online Essentials      (26.01.2019)</p>
+            <br>6. Using Databases        (25.05.2019)</p>
+            <br>7. Computer Essentials    (01.02.2020)</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:theodorra.stav@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <footer>
         <p>&copy; 2024 Theodora Stavrou. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript for Light/Dark Mode Toggle and Scroll Animations -->
-    <script>
-        // Dark Mode Toggle
-        document.getElementById("dark-mode-toggle").addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-        });
-
-        // Fade-in effect on scroll
-        window.addEventListener('scroll', () => {
-            const elements = document.querySelectorAll('.fade-in');
-            const windowHeight = window.innerHeight;
-
-            elements.forEach((element) => {
-                const elementPosition = element.getBoundingClientRect().top;
-
-                if (elementPosition < windowHeight) {
-                    element.classList.add('visible');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
