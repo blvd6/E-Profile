@@ -1,17 +1,36 @@
+/* General Styles */
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background: #f0f8ff; /* Soft blue background */
 }
 
+/* Header */
 header {
-    background: #051e57;
+    background: linear-gradient(135deg, #051e57, #1e90ff);
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
+header h1 {
+    font-size: 2.5rem;
+    animation: typewriter 3s steps(20) 1s forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -25,53 +44,93 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-section {
-    padding: 20px;
+nav ul li a:hover {
+    color: #f0f8ff;
 }
 
-h2 {
+/* About Section */
+#about {
+    background: #e6f7ff;
+    padding: 40px;
+    text-align: center;
+    border-top: 5px solid #051e57;
+}
+
+#about h2 {
     color: #051e57;
+    margin-bottom: 10px;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background: #ffffff;
+    padding: 40px;
+    text-align: center;
 }
 
 .project {
-    margin: 10px 0;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-form label {
-    margin: 10px 0 5px;
+.project h3 {
+    color: #051e57;
+}
+
+/* Contact Section */
+#contact {
+    background: #e6f7ff;
+    padding: 40px;
+    text-align: center;
+    border-top: 5px solid #051e57;
 }
 
 form input, form textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 button {
-    background: #051e57;
+    background: linear-gradient(135deg, #051e57, #1e90ff);
     color: #fff;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: #3b4c91;
+    background: #1e90ff;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: #f1f1f1;
+    background: linear-gradient(135deg, #051e57, #3b4c91);
+    color: #fff;
+}
+
+/* Animations */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
