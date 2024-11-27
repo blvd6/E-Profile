@@ -4,180 +4,111 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f9f9f9; /* Subtle light background */
-}
-
-/* Header */
-header {
-    background: #051e57;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    animation: fadeIn 2s ease-in-out;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-top: 5px;
-    animation: slideIn 2s ease-out;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    color: #f1c40f;
-    transform: scale(1.1);
-}
-
-/* Section */
-section {
-    padding: 20px;
-}
-
-h2 {
-    color: #051e57;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    position: relative;
-    animation: fadeIn 2s ease-in-out;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #051e57;
-    margin: 10px auto;
-}
-
-/* About Section */
-#about {
-    background: #e6f2ff;
-    border-top: 5px solid #051e57;
-}
-
-/* Portfolio Section */
-#portfolio {
-    background: #ffffff;
-}
-
-.project {
-    margin: 20px 0;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
     background: #f9f9f9;
-    position: relative;
-    overflow: hidden;
 }
 
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project h3 {
-    color: #051e57;
-}
-
-.project p {
-    color: #333;
-}
-
-/* Contact Section */
-#contact {
-    background: #e6f2ff;
-    border-top: 5px solid #051e57;
+/* Containers */
+section {
+    max-width: 1200px; /* Limit width on larger screens */
+    margin: 0 auto;
+    padding: 20px;
 }
 
 form {
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Header */
+header {
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+/* Navigation */
+nav ul {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Portfolio */
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    text-align: left;
 }
 
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
+/* Contact */
 form input, form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-button {
-    background: #051e57;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background: #3b4c91;
-    transform: translateY(-3px);
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #f1f1f1;
-    color: #333;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Media Queries for Desktop Screens */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 3.5rem;
     }
-    to {
-        opacity: 1;
+
+    header p {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+        gap: 20px;
+    }
+
+    .project {
+        flex-direction: column; /* Stack items on smaller cards */
+        text-align: center;
+    }
+
+    #contact {
+        padding: 40px;
+    }
+
+    form input, form textarea {
+        font-size: 1rem;
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
+@media (min-width: 1200px) {
+    #portfolio {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout for large screens */
     }
-    to {
-        transform: translateY(0);
-        opacity: 1;
+
+    .project {
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 4rem;
     }
 }
