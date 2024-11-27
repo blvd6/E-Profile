@@ -4,111 +4,168 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f9f9f9;
+    background: #f9f9f9; /* Subtle neutral background */
+    color: #333;
 }
 
-/* Containers */
-section {
-    max-width: 1200px; /* Limit width on larger screens */
-    margin: 0 auto;
-    padding: 20px;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Header */
 header {
-    padding: 30px 0;
+    background: #051e57;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 header p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 /* Navigation */
 nav ul {
-    text-align: center;
-    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0;
 }
 
-/* Portfolio */
-.project {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Section Styling */
+section {
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #051e57;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#about p {
+    text-align: justify;
+}
+
+/* Portfolio Section */
+#portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
+}
+
+.project {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #f9f9f9;
     text-align: left;
 }
 
-/* Contact */
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #051e57;
+}
+
+/* Contact Section */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
 form input, form textarea {
-    width: 100%;
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background: #051e57;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #3b4c91;
 }
 
 /* Footer */
 footer {
-    font-size: 1rem;
+    text-align: center;
+    padding: 20px;
+    background: #f1f1f1;
+    color: #333;
 }
 
-/* Media Queries for Desktop Screens */
+/* Desktop Specific Styling */
 @media (min-width: 768px) {
-    header h1 {
-        font-size: 3.5rem;
-    }
-
-    header p {
-        font-size: 1.8rem;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-    }
-
     #portfolio {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-    }
-
-    .project {
-        flex-direction: column; /* Stack items on smaller cards */
-        text-align: center;
-    }
-
-    #contact {
-        padding: 40px;
-    }
-
-    form input, form textarea {
-        font-size: 1rem;
     }
 }
 
 @media (min-width: 1200px) {
-    #portfolio {
-        grid-template-columns: repeat(3, 1fr); /* Three-column layout for large screens */
-    }
-
-    .project {
-        text-align: left;
+    header {
+        padding: 60px 20px;
     }
 
     header h1 {
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+
+    #portfolio {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    form input, form textarea {
+        font-size: 1.1rem;
     }
 }
