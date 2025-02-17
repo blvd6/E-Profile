@@ -1,0 +1,200 @@
+/* -----------------------------------------------------
+   General / Reset
+----------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Using Times New Roman now */
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f9f9f9;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* -----------------------------------------------------
+   Header
+----------------------------------------------------- */
+header {
+  background: #051e57; /* Navy background */
+  text-align: center;
+  padding: 2rem 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Navigation Bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #f1c40f;
+  transform: scale(1.1);
+}
+
+/* -----------------------------------------------------
+   Sections
+----------------------------------------------------- */
+section {
+  background-color: #2b2b2b; /* Dark/charcoal background */
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Center paragraph text and limit width for readability */
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Project Cards in Portfolio */
+.project {
+  background-color: #333; 
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+  color: #f1c40f; /* Accent color for project titles */
+  margin-bottom: 1rem;
+}
+
+.project p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------------
+   Contact Form
+----------------------------------------------------- */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: #051e57;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #3b4c91;
+  transform: translateY(-3px);
+}
+
+/* -----------------------------------------------------
+   Footer
+----------------------------------------------------- */
+footer {
+  background: #f1f1f1; /* Light background */
+  color: #333;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* 
+  Remove the bubble style.
+  If you still want the image to have a certain size,
+  you can add a simple rule, for example:
+*/
+.linkedin-image {
+  /* Example: Just a fixed width, no circle, no hover scale */
+  width: 60px; 
+  /* height: auto;  or set a fixed height if you want */
+  /* border-radius: 0;  if you previously had a radius, set it to 0 or remove entirely */
+}
+
+/* -----------------------------------------------------
+   About Section Profile Picture
+----------------------------------------------------- */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes the image circular */
+  margin-bottom: 1rem;
+  border: 3px solid #fff; /* Optional border for a cleaner look */
+}
