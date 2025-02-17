@@ -159,6 +159,65 @@ footer {
     background: #f1f1f1;
     color: #333;
     font-size: 0.9rem;
+
+/* Profile Card */
+.profile-card {
+  background-color: #fff;
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto; /* If you want to center it in the section */
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: #051e57; /* Adjust as needed */
+}
+
+.profile-major {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.profile-intro {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0 auto 1.5rem;
+  color: #444;
+  max-width: 250px;
+}
+
+.profile-links {
+  margin-top: 1rem;
+}
+
+.btn {
+  background-color: #051e57;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3b4c91;
+}
+
 }
 
 /* Animations */
