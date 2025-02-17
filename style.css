@@ -8,7 +8,6 @@
 }
 
 body {
-  /* Using Times New Roman now */
   font-family: "Times New Roman", Times, serif;
   background-color: #f9f9f9;
   color: #fff;
@@ -77,6 +76,29 @@ section h2 {
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+/* About Me Section */
+#about {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
+  display: block;
+  margin: 1rem auto;
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  object-fit: cover; /* Ensures the image fills the circle properly */
+  border-radius: 50%;
+  border: 3px solid #fff; /* Optional: Adds a white border */
 }
 
 /* Center paragraph text and limit width for readability */
@@ -166,35 +188,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* 
-  Remove the bubble style.
-  If you still want the image to have a certain size,
-  you can add a simple rule, for example:
-*/
+/* LinkedIn Image */
 .linkedin-image {
-  /* Example: Just a fixed width, no circle, no hover scale */
-  width: 60px; 
-  /* height: auto;  or set a fixed height if you want */
-  /* border-radius: 0;  if you previously had a radius, set it to 0 or remove entirely */
-}
-
-/* -----------------------------------------------------
-   About Section Profile Picture
------------------------------------------------------ */
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.profile-pic {
-  width: 150px; /* Adjust size as needed */
-  height: 150px;
-  border-radius: 50%; /* Makes the image circular */
-  margin-bottom: 1rem;
-  border: 3px solid #fff; /* Optional border for a cleaner look */
+  width: 60px;
 }
